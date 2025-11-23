@@ -1,0 +1,53 @@
+version: '3.8'
+
+services:
+  pqcts-backend:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: pqcts-backend
+    ports:
+      - "4000:8000"
+      - "3001:3001"
+    environment:
+      - PORT=8000
+      - QUANTUM_SERVICE_PORT=3001
+      - QUANTUM_API_URL=http://localhost:3001
+      - DATABASE_URL=sqlite:///./qms_quantum.db
+      - JWT_SECRET=${JWT_SECRET:-your-secret-key-change-in-production}
+    volumes:
+      # Mount database for persistence (optional for development)
+      - ./data:/app/data
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "python3", "-c", "import httpx; httpx.get('http://localhost:8000/api/health', timeout=5.0)"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 40s
+    networks:
+      - pqcts-network
+
+  # Optional: PostgreSQL for production-like testing
+  postgres:
+    image: postgres:15-alpine
+    container_name: pqcts-postgres
+    environment:
+      - POSTGRES_DB=pqcts_db
+      - POSTGRES_USER=pqcts_user
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD:-changeme}
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    networks:
+      - pqcts-network
+    profiles:
+      - postgres
+
+networks:
+  pqcts-network:
+    driver: bridge
+
+volumes:
+  postgres-data:

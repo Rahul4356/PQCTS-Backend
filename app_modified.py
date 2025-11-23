@@ -41,16 +41,24 @@ logging.basicConfig(
 logger = logging.getLogger(__name__)
 
 # Configuration
-SECRET_KEY = os.environ.get("JWT_SECRET", "quantum-secure-key-" + secrets.token_hex(32))
-ALGORITHM = "HS256"
-ACCESS_TOKEN_EXPIRE_MINUTES = 1440
-BCRYPT_ROUNDS = 12
+SECRET_KEY = os.environ.get("JWT_SECRET")
+if not SECRET_KEY:
+    logger.warning("JWT_SECRET not set! Generating temporary key - DO NOT USE IN PRODUCTION!")
+    SECRET_KEY = "quantum-secure-key-" + secrets.token_hex(32)
+
+ALGORITHM = os.environ.get("JWT_ALGORITHM", "HS256")
+ACCESS_TOKEN_EXPIRE_MINUTES = int(os.environ.get("ACCESS_TOKEN_EXPIRE_MINUTES", "1440"))
+BCRYPT_ROUNDS = int(os.environ.get("BCRYPT_ROUNDS", "12"))
 
 # Service URLs
 QUANTUM_API = os.environ.get("QUANTUM_API_URL", "http://localhost:3001")
 
 # Database configuration
 SQLALCHEMY_DATABASE_URL = os.environ.get("DATABASE_URL", "sqlite:///./qms_quantum.db")
+
+# Environment
+ENVIRONMENT = os.environ.get("ENVIRONMENT", "development")
+DEBUG = os.environ.get("DEBUG", "False").lower() in ("true", "1", "yes")
 engine = create_engine(SQLALCHEMY_DATABASE_URL, connect_args={"check_same_thread": False} if "sqlite" in SQLALCHEMY_DATABASE_URL else {})
 SessionLocal = sessionmaker(autocommit=False, autoflush=False, bind=engine)
 Base = declarative_base()
@@ -178,9 +186,12 @@ app = FastAPI(
     redoc_url="/redoc"
 )
 
+# CORS configuration from environment
+CORS_ORIGINS = os.environ.get("CORS_ORIGINS", "*").split(",")
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=CORS_ORIGINS,
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -1415,11 +1426,14 @@ if __name__ == "__main__":
     print("Alternative Docs: http://localhost:4000/redoc")
     print("="*80 + "\n")
     
+    # Get port from environment variable or use default
+    port = int(os.environ.get("PORT", 4000))
+
     uvicorn.run(
         app,
         host="0.0.0.0",
-        port=4000,
-        log_level="info",
+        port=port,
+        log_level=os.environ.get("LOG_LEVEL", "info").lower(),
         access_log=True,
         use_colors=True
     )
