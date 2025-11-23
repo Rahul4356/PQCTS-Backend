@@ -2,6 +2,8 @@
 
 This guide explains how to deploy the PQCTS (Post-Quantum Cryptographic Transport System) backend to Azure.
 
+> **Important:** This is a **backend-only API server**. The frontend application is hosted separately and connects to this backend via REST APIs and WebSockets. Make sure to configure CORS properly to allow your frontend domain.
+
 ## Table of Contents
 
 1. [Prerequisites](#prerequisites)
@@ -11,9 +13,10 @@ This guide explains how to deploy the PQCTS (Post-Quantum Cryptographic Transpor
 5. [Option 2: Azure App Service with Containers](#option-2-azure-app-service-with-containers)
 6. [Option 3: Azure Kubernetes Service (AKS)](#option-3-azure-kubernetes-service-aks)
 7. [Database Configuration](#database-configuration)
-8. [CI/CD Setup](#cicd-setup)
-9. [Monitoring and Logging](#monitoring-and-logging)
-10. [Troubleshooting](#troubleshooting)
+8. [CORS Configuration for Frontend](#cors-configuration-for-frontend)
+9. [CI/CD Setup](#cicd-setup)
+10. [Monitoring and Logging](#monitoring-and-logging)
+11. [Troubleshooting](#troubleshooting)
 
 ---
 
@@ -364,6 +367,111 @@ az containerapp update \
 # Connection string
 DATABASE_URL="mssql+pyodbc://username:password@servername.database.windows.net:1433/pqcts_db?driver=ODBC+Driver+18+for+SQL+Server"
 ```
+
+---
+
+## CORS Configuration for Frontend
+
+Since the frontend is hosted separately, you **must** configure CORS (Cross-Origin Resource Sharing) to allow your frontend to communicate with this backend API.
+
+### Development Configuration
+
+For local development and testing, you can allow all origins:
+
+```bash
+CORS_ORIGINS=*
+```
+
+### Production Configuration (CRITICAL)
+
+**⚠️ NEVER use `CORS_ORIGINS=*` in production!**
+
+Instead, specify your exact frontend domain(s):
+
+```bash
+# Single domain
+CORS_ORIGINS=https://your-frontend.com
+
+# Multiple domains (comma-separated, no spaces)
+CORS_ORIGINS=https://your-frontend.com,https://www.your-frontend.com,https://app.your-frontend.com
+```
+
+### Update Container App with CORS
+
+```bash
+# Update your Container App with the correct CORS origins
+az containerapp update \
+  --name $CONTAINER_APP_NAME \
+  --resource-group $RESOURCE_GROUP \
+  --set-env-vars \
+    CORS_ORIGINS=https://your-frontend.com,https://www.your-frontend.com
+```
+
+### Frontend Configuration
+
+In your frontend application, configure the API base URL:
+
+**JavaScript/TypeScript:**
+```javascript
+// config.js or .env file in your frontend
+const API_BASE_URL = 'https://your-backend.azurecontainerapps.io';
+const WS_BASE_URL = 'wss://your-backend.azurecontainerapps.io';
+
+// Example API call
+fetch(`${API_BASE_URL}/api/health`)
+  .then(response => response.json())
+  .then(data => console.log(data));
+
+// Example WebSocket connection
+const ws = new WebSocket(`${WS_BASE_URL}/ws/username`);
+```
+
+**React Example:**
+```javascript
+// .env.production
+REACT_APP_API_URL=https://your-backend.azurecontainerapps.io
+REACT_APP_WS_URL=wss://your-backend.azurecontainerapps.io
+
+// In your code
+const apiUrl = process.env.REACT_APP_API_URL;
+```
+
+**Vue Example:**
+```javascript
+// .env.production
+VUE_APP_API_URL=https://your-backend.azurecontainerapps.io
+VUE_APP_WS_URL=wss://your-backend.azurecontainerapps.io
+
+// In your code
+const apiUrl = process.env.VUE_APP_API_URL;
+```
+
+### Verify CORS Configuration
+
+Test your CORS configuration:
+
+```bash
+# From your frontend domain, make a test request
+curl -H "Origin: https://your-frontend.com" \
+  -H "Access-Control-Request-Method: POST" \
+  -H "Access-Control-Request-Headers: Content-Type" \
+  -X OPTIONS \
+  https://your-backend.azurecontainerapps.io/api/health \
+  --verbose
+```
+
+You should see `Access-Control-Allow-Origin` in the response headers.
+
+### Common CORS Issues
+
+**Issue:** "No 'Access-Control-Allow-Origin' header is present"
+- **Solution:** Add your frontend domain to `CORS_ORIGINS`
+
+**Issue:** "CORS policy: The request client is not a secure context"
+- **Solution:** Use HTTPS for your frontend (not HTTP)
+
+**Issue:** WebSocket connection fails with CORS error
+- **Solution:** Ensure WebSocket URL uses `wss://` (not `ws://`) for HTTPS sites
 
 ---
 

@@ -1,25 +1,28 @@
-# Quantum Messaging System - C Backend Implementation
+# Quantum Messaging System - Backend API Server
 
-This project replaces the Python-based quantum service (`service.py`) with a high-performance C implementation while maintaining compatibility with the existing FastAPI backend (`app.py`) and HTML frontend (`index.html`).
+This is the **backend-only API server** for the Quantum Messaging System (PQCTS). The frontend application is hosted in a separate repository and connects to this backend via REST APIs and WebSockets.
+
+This project implements a high-performance C-based quantum cryptography service integrated with a FastAPI backend, providing quantum-resistant encryption for secure messaging.
 
 ## Architecture
 
-The system now consists of:
+This backend server consists of two main components:
 
-1. **C Quantum Service** (replaces `service.py`):
+1. **C Quantum Service** (`quantum_service_c/`):
    - `quantum_service.c` - HTTP server and API endpoints
    - `quantum_crypto.c` - Quantum cryptography operations using liboqs
    - `json_utils.c` - JSON parsing and generation utilities
-   - Runs on port 3001
+   - Runs on port 3001 (internal)
 
 2. **Python FastAPI Backend** (`app_modified.py`):
-   - Minimal changes from original `app.py`
-   - Communicates with C service via HTTP
-   - Runs on port 4000
+   - REST API endpoints for authentication, messaging, and session management
+   - WebSocket support for real-time communication
+   - Communicates with C quantum service via HTTP
+   - Runs on port 8000 (configurable via PORT env var)
 
-3. **HTML Frontend** (`index.html`):
-   - No changes required
-   - Works seamlessly with the new backend
+3. **Frontend Application** (separate repository):
+   - Connects to this backend via REST APIs and WebSockets
+   - Configure CORS_ORIGINS environment variable to allow your frontend domain
 
 ## Prerequisites
 
@@ -203,6 +206,63 @@ pkg-config --cflags openssl
 # Reinstall if needed
 sudo apt-get install libssl-dev
 ```
+
+## Azure Deployment
+
+This backend is **ready for Azure deployment**. See the detailed deployment guides:
+
+- **[AZURE_READY.md](AZURE_READY.md)** - Quick start guide and checklist
+- **[DEPLOYMENT.md](DEPLOYMENT.md)** - Complete deployment guide with all options
+
+### Quick Deploy to Azure
+
+```bash
+# Using Docker Compose (local testing)
+docker-compose up --build
+
+# Deploy to Azure Container Apps
+az deployment group create \
+  --resource-group pqcts-rg \
+  --template-file azure-deploy.bicep \
+  --parameters \
+    containerImage=your-image:latest \
+    jwtSecret=$(python3 -c "import secrets; print(secrets.token_hex(32))")
+```
+
+## Connecting Your Frontend
+
+### CORS Configuration
+
+Configure the `CORS_ORIGINS` environment variable to allow your frontend domain:
+
+```bash
+# Development (allows all origins)
+CORS_ORIGINS=*
+
+# Production (specific domains only)
+CORS_ORIGINS=https://your-frontend.com,https://www.your-frontend.com
+```
+
+### Frontend API Configuration
+
+Point your frontend to this backend:
+
+```javascript
+// In your frontend config
+const API_BASE_URL = 'https://your-backend.azurecontainerapps.io';
+const WS_URL = 'wss://your-backend.azurecontainerapps.io';
+```
+
+### Available API Endpoints
+
+- **Authentication:** `/api/register`, `/api/login`, `/api/logout`
+- **Key Exchange:** `/api/exchange/request`, `/api/exchange/respond`
+- **Messaging:** `/api/messages/send`, `/api/messages/session/{session_id}`
+- **Sessions:** `/api/sessions/active`, `/api/sessions/{session_id}/terminate`
+- **WebSocket:** `/ws/{username}`
+- **Utilities:** `/api/health`, `/api/users/available`, `/api/stats`
+
+See `/docs` endpoint for complete API documentation.
 
 ## License
 

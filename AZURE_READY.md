@@ -4,6 +4,8 @@
 
 All required files and configurations have been created to deploy the PQCTS Backend to Azure.
 
+> **Note:** This is a **backend-only** API server. The frontend application is hosted separately and connects to this API via REST endpoints and WebSockets.
+
 ---
 
 ## 📦 Files Created
@@ -21,7 +23,7 @@ All required files and configurations have been created to deploy the PQCTS Back
 ### Application Configuration
 - ✅ `requirements.txt` - Python dependencies
 - ✅ `.env.example` - Environment variables documentation
-- ✅ `index.html` - Frontend landing page
+- ✅ `index.html` - Minimal API status page (backend-only)
 
 ### Documentation
 - ✅ `DEPLOYMENT.md` - Complete deployment guide
@@ -132,8 +134,69 @@ DATABASE_URL=sqlite:///./qms_quantum.db  # Development only
 # Application
 ENVIRONMENT=production
 LOG_LEVEL=INFO
-CORS_ORIGINS=*  # Set to your domain in production
+
+# CORS - IMPORTANT for connecting your frontend
+CORS_ORIGINS=*  # Development only
+# CORS_ORIGINS=https://your-frontend-domain.com,https://www.your-frontend-domain.com  # Production
 ```
+
+---
+
+## 🌐 Connecting Your Frontend
+
+This backend is designed to be consumed by a separate frontend application.
+
+### CORS Configuration
+
+**For Development:**
+```bash
+CORS_ORIGINS=*  # Allows all origins
+```
+
+**For Production (IMPORTANT):**
+```bash
+# Only allow your frontend domain(s)
+CORS_ORIGINS=https://your-frontend.com,https://www.your-frontend.com
+```
+
+### Frontend Configuration
+
+Point your frontend to this backend API:
+
+```javascript
+// In your frontend config
+const API_BASE_URL = 'https://your-backend.azurecontainerapps.io';
+const WS_URL = 'wss://your-backend.azurecontainerapps.io';
+```
+
+### API Endpoints Available
+
+- **Authentication:**
+  - `POST /api/register` - User registration
+  - `POST /api/login` - User login
+  - `POST /api/logout` - User logout
+
+- **Quantum Key Exchange:**
+  - `POST /api/exchange/request` - Initiate key exchange
+  - `POST /api/exchange/respond` - Respond to key exchange
+
+- **Messaging:**
+  - `POST /api/messages/send` - Send encrypted message
+  - `GET /api/messages/session/{session_id}` - Get session messages
+
+- **Sessions:**
+  - `GET /api/sessions/active` - Get active sessions
+  - `POST /api/sessions/{session_id}/terminate` - Terminate session
+
+- **WebSocket:**
+  - `WS /ws/{username}` - Real-time communication
+
+- **Utilities:**
+  - `GET /api/health` - Health check
+  - `GET /api/users/available` - Available users
+  - `GET /api/stats` - User statistics
+
+See `/docs` endpoint for complete API documentation.
 
 ---
 
