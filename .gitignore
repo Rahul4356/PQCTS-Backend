@@ -41,6 +41,13 @@ env/
 ENV/
 .venv/
 
+# Data directory
+data/
+
+# Deployment files (contain secrets)
+deployment-info.txt
+azure-container.yaml
+
 # IDE
 .vscode/
 .idea/

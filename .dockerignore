@@ -1,0 +1,47 @@
+# Git
+.git
+.gitignore
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+
+# Build artifacts
+*.o
+quantum_service_c/quantum_service
+quantum_service_c/*.o
+
+# Logs
+*.log
+qms_platform.log
+fastapi.log
+quantum_service_c/quantum_service.log
+
+# Database files
+*.db
+*.db-shm
+*.db-wal
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Data directory
+data/
+
+# Documentation
+README.md
+*.md
