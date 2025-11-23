@@ -1,0 +1,111 @@
+2025-11-01 19:14:25,244 - __main__ - INFO - QMS Platform v3.0 starting up...
+2025-11-01 19:14:25,244 - __main__ - INFO - QMS Platform ready - Quantum service will be checked on demand
+2025-11-01 19:14:44,257 - __main__ - INFO - QMS Platform shutting down...
+2025-11-01 19:14:50,740 - __main__ - INFO - QMS Platform v3.0 starting up...
+2025-11-01 19:14:50,740 - __main__ - INFO - QMS Platform ready - Quantum service will be checked on demand
+2025-11-01 19:17:06,474 - __main__ - INFO - QMS Platform shutting down...
+2025-11-01 19:17:14,210 - __main__ - INFO - QMS Platform v3.0 starting up...
+2025-11-01 19:17:14,210 - __main__ - INFO - QMS Platform ready - Quantum service will be checked on demand
+2025-11-01 19:22:06,598 - __main__ - INFO - New user registered: testuser
+2025-11-01 19:23:51,964 - __main__ - INFO - New user registered: alice
+2025-11-01 19:24:06,470 - __main__ - INFO - New user registered: bob
+2025-11-01 19:24:06,652 - __main__ - INFO - User logged in: alice
+2025-11-01 19:24:06,653 - __main__ - ERROR - Unhandled exception: unsupported operand type(s) for @: 'TokenResponse' and 'function'
+2025-11-01 19:24:06,658 - __main__ - ERROR - Traceback (most recent call last):
+  File "/Users/rahulsewmal/Desktop/PQCTS/.venv/lib/python3.9/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/rahulsewmal/Desktop/PQCTS/.venv/lib/python3.9/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/rahulsewmal/Desktop/PQCTS/.venv/lib/python3.9/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/rahulsewmal/Desktop/PQCTS/.venv/lib/python3.9/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/rahulsewmal/Desktop/PQCTS/.venv/lib/python3.9/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/rahulsewmal/Desktop/PQCTS/.venv/lib/python3.9/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/rahulsewmal/Desktop/PQCTS/.venv/lib/python3.9/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/rahulsewmal/Desktop/PQCTS/.venv/lib/python3.9/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/Users/rahulsewmal/Desktop/PQCTS/.venv/lib/python3.9/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/Users/rahulsewmal/Desktop/PQCTS/.venv/lib/python3.9/site-packages/fastapi/routing.py", line 124, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/rahulsewmal/Desktop/PQCTS/.venv/lib/python3.9/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/rahulsewmal/Desktop/PQCTS/.venv/lib/python3.9/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/rahulsewmal/Desktop/PQCTS/.venv/lib/python3.9/site-packages/fastapi/routing.py", line 110, in app
+    response = await f(request)
+  File "/Users/rahulsewmal/Desktop/PQCTS/.venv/lib/python3.9/site-packages/fastapi/routing.py", line 390, in app
+    raw_response = await run_endpoint_function(
+  File "/Users/rahulsewmal/Desktop/PQCTS/.venv/lib/python3.9/site-packages/fastapi/routing.py", line 289, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/Users/rahulsewmal/Desktop/PQCTS/app_modified.py", line 485, in login
+    return TokenResponse(
+TypeError: unsupported operand type(s) for @: 'TokenResponse' and 'function'
+
+2025-11-01 19:25:42,069 - __main__ - INFO - User logged in: alice
+2025-11-01 19:25:42,069 - __main__ - ERROR - Unhandled exception: unsupported operand type(s) for @: 'TokenResponse' and 'function'
+2025-11-01 19:25:42,069 - __main__ - ERROR - Traceback (most recent call last):
+  File "/Users/rahulsewmal/Desktop/PQCTS/.venv/lib/python3.9/site-packages/starlette/middleware/errors.py", line 164, in __call__
+    await self.app(scope, receive, _send)
+  File "/Users/rahulsewmal/Desktop/PQCTS/.venv/lib/python3.9/site-packages/starlette/middleware/cors.py", line 85, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/rahulsewmal/Desktop/PQCTS/.venv/lib/python3.9/site-packages/starlette/middleware/exceptions.py", line 63, in __call__
+    await wrap_app_handling_exceptions(self.app, conn)(scope, receive, send)
+  File "/Users/rahulsewmal/Desktop/PQCTS/.venv/lib/python3.9/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/rahulsewmal/Desktop/PQCTS/.venv/lib/python3.9/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/rahulsewmal/Desktop/PQCTS/.venv/lib/python3.9/site-packages/fastapi/middleware/asyncexitstack.py", line 18, in __call__
+    await self.app(scope, receive, send)
+  File "/Users/rahulsewmal/Desktop/PQCTS/.venv/lib/python3.9/site-packages/starlette/routing.py", line 716, in __call__
+    await self.middleware_stack(scope, receive, send)
+  File "/Users/rahulsewmal/Desktop/PQCTS/.venv/lib/python3.9/site-packages/starlette/routing.py", line 736, in app
+    await route.handle(scope, receive, send)
+  File "/Users/rahulsewmal/Desktop/PQCTS/.venv/lib/python3.9/site-packages/starlette/routing.py", line 290, in handle
+    await self.app(scope, receive, send)
+  File "/Users/rahulsewmal/Desktop/PQCTS/.venv/lib/python3.9/site-packages/fastapi/routing.py", line 124, in app
+    await wrap_app_handling_exceptions(app, request)(scope, receive, send)
+  File "/Users/rahulsewmal/Desktop/PQCTS/.venv/lib/python3.9/site-packages/starlette/_exception_handler.py", line 53, in wrapped_app
+    raise exc
+  File "/Users/rahulsewmal/Desktop/PQCTS/.venv/lib/python3.9/site-packages/starlette/_exception_handler.py", line 42, in wrapped_app
+    await app(scope, receive, sender)
+  File "/Users/rahulsewmal/Desktop/PQCTS/.venv/lib/python3.9/site-packages/fastapi/routing.py", line 110, in app
+    response = await f(request)
+  File "/Users/rahulsewmal/Desktop/PQCTS/.venv/lib/python3.9/site-packages/fastapi/routing.py", line 390, in app
+    raw_response = await run_endpoint_function(
+  File "/Users/rahulsewmal/Desktop/PQCTS/.venv/lib/python3.9/site-packages/fastapi/routing.py", line 289, in run_endpoint_function
+    return await dependant.call(**values)
+  File "/Users/rahulsewmal/Desktop/PQCTS/app_modified.py", line 485, in login
+    return TokenResponse(
+TypeError: unsupported operand type(s) for @: 'TokenResponse' and 'function'
+
+2025-11-01 19:26:13,725 - __main__ - INFO - QMS Platform shutting down...
+2025-11-01 19:26:14,988 - __main__ - INFO - QMS Platform v3.0 starting up...
+2025-11-01 19:26:14,988 - __main__ - INFO - QMS Platform ready - Quantum service will be checked on demand
+2025-11-01 19:26:56,209 - __main__ - INFO - New user registered: finaltest
+2025-11-01 19:27:04,456 - __main__ - INFO - User logged in: finaltest
+2025-11-01 19:28:11,970 - __main__ - INFO - New user registered: newuser
+2025-11-01 19:30:26,660 - __main__ - INFO - New user registered: aliced
+2025-11-01 19:31:05,075 - __main__ - INFO - User logged in: newuser
+2025-11-01 19:31:49,875 - __main__ - INFO - User logged in: newuser
+2025-11-01 19:32:09,601 - __main__ - INFO - User logged in: aliced
+2025-11-01 19:33:04,133 - __main__ - INFO - New user registered: bobd
+2025-11-01 19:33:20,284 - __main__ - INFO - User logged in: bobd
+2025-11-01 19:34:18,260 - __main__ - INFO - QMS Platform shutting down...
+2025-11-01 19:34:19,479 - __main__ - INFO - QMS Platform v3.0 starting up...
+2025-11-01 19:34:19,479 - __main__ - INFO - QMS Platform ready - Quantum service will be checked on demand
+2025-11-01 19:34:45,084 - __main__ - INFO - User logged in: newuser
+2025-11-01 19:35:06,989 - __main__ - INFO - User logged in: bobd
+2025-11-01 19:35:16,265 - __main__ - INFO - User logged in: aliced
+2025-11-01 19:38:18,460 - __main__ - INFO - QMS Platform shutting down...
+2025-11-01 19:38:20,682 - __main__ - INFO - QMS Platform v3.0 starting up...
+2025-11-01 19:38:20,682 - __main__ - INFO - QMS Platform ready - Quantum service will be checked on demand
+2025-11-24 02:14:43,303 - __main__ - INFO - QMS Platform v3.0 starting up...
+2025-11-24 02:14:43,304 - __main__ - INFO - QMS Platform ready - Quantum service will be checked on demand
+2025-11-24 02:16:12,413 - __main__ - INFO - User logged in: aliced
+2025-11-24 02:16:29,618 - __main__ - INFO - User logged in: bobd
+2025-11-24 02:18:42,063 - __main__ - INFO - User logged out: bobd

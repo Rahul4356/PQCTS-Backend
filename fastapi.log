@@ -1,0 +1,418 @@
+/Users/rahulsewmal/Desktop/PQCTS/app_modified.py:56: MovedIn20Warning: The ``declarative_base()`` function is now available as sqlalchemy.orm.declarative_base(). (deprecated since: 2.0) (Background on SQLAlchemy 2.0 at: https://sqlalche.me/e/b8d9)
+  Base = declarative_base()
+/Users/rahulsewmal/Desktop/PQCTS/app_modified.py:243: PydanticDeprecatedSince20: Pydantic V1 style `@validator` validators are deprecated. You should migrate to Pydantic V2 style `@field_validator` validators, see the migration guide for more details. Deprecated in Pydantic V2.0 to be removed in V3.0. See Pydantic V2 Migration Guide at https://errors.pydantic.dev/2.12/migration/
+  @validator('username')
+/Users/rahulsewmal/Desktop/PQCTS/app_modified.py:1350: DeprecationWarning: 
+        on_event is deprecated, use lifespan event handlers instead.
+
+        Read more about it in the
+        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+        
+  @app.on_event("startup")
+/Users/rahulsewmal/Desktop/PQCTS/app_modified.py:1356: DeprecationWarning: 
+        on_event is deprecated, use lifespan event handlers instead.
+
+        Read more about it in the
+        [FastAPI docs for Lifespan Events](https://fastapi.tiangolo.com/advanced/events/).
+        
+  @app.on_event("shutdown")
+[32mINFO[0m:     Started server process [[36m14063[0m]
+[32mINFO[0m:     Waiting for application startup.
+2025-11-24 02:14:43,303 - __main__ - INFO - QMS Platform v3.0 starting up...
+2025-11-24 02:14:43,304 - __main__ - INFO - QMS Platform ready - Quantum service will be checked on demand
+[32mINFO[0m:     Application startup complete.
+[32mINFO[0m:     Uvicorn running on [1mhttp://0.0.0.0:4000[0m (Press CTRL+C to quit)
+
+================================================================================
+QMS PLATFORM - QUANTUM MESSAGING SYSTEM - v3.0.0
+================================================================================
+Features:
+  - ML-KEM-768 quantum-resistant key exchange
+  - Falcon-512 quantum-resistant signatures
+  - Wrap-and-Sign hybrid protocol
+  - AES-256-GCM authenticated encryption
+  - WebSocket real-time communication
+  - Perfect forward secrecy
+  - Comprehensive audit logging
+================================================================================
+Starting server on http://localhost:4000
+API Documentation: http://localhost:4000/docs
+Alternative Docs: http://localhost:4000/redoc
+================================================================================
+
+[32mINFO[0m:     127.0.0.1:53767 - "[1mGET /api/health HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53778 - "[1mGET / HTTP/1.1[0m" [32m200 OK[0m
+[33mWARNING[0m:  Unsupported upgrade request.
+[33mWARNING[0m:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+[32mINFO[0m:     127.0.0.1:53784 - "[1mGET /ws/aliced HTTP/1.1[0m" [31m404 Not Found[0m
+[32mINFO[0m:     127.0.0.1:53778 - "[1mGET /api/users/available HTTP/1.1[0m" [31m401 Unauthorized[0m
+[32mINFO[0m:     127.0.0.1:53778 - "[1mGET /sw.js HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53786 - "[1mGET /api/session/status HTTP/1.1[0m" [31m401 Unauthorized[0m
+[32mINFO[0m:     127.0.0.1:53786 - "[1mGET /index.html HTTP/1.1[0m" [31m404 Not Found[0m
+[32mINFO[0m:     127.0.0.1:53778 - "[1mGET /favicon.ico HTTP/1.1[0m" [31m404 Not Found[0m
+[32mINFO[0m:     127.0.0.1:53786 - "[1mGET /api/connection/pending HTTP/1.1[0m" [31m401 Unauthorized[0m
+[33mWARNING[0m:  Unsupported upgrade request.
+[33mWARNING[0m:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+[32mINFO[0m:     127.0.0.1:53788 - "[1mGET /ws/aliced HTTP/1.1[0m" [31m404 Not Found[0m
+[33mWARNING[0m:  Unsupported upgrade request.
+[33mWARNING[0m:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+[32mINFO[0m:     127.0.0.1:53790 - "[1mGET /ws/aliced HTTP/1.1[0m" [31m404 Not Found[0m
+[32mINFO[0m:     127.0.0.1:53786 - "[1mGET /api/connection/pending HTTP/1.1[0m" [31m401 Unauthorized[0m
+[33mWARNING[0m:  Unsupported upgrade request.
+[33mWARNING[0m:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+[32mINFO[0m:     127.0.0.1:53792 - "[1mGET /ws/aliced HTTP/1.1[0m" [31m404 Not Found[0m
+[32mINFO[0m:     127.0.0.1:53786 - "[1mGET /api/users/available HTTP/1.1[0m" [31m401 Unauthorized[0m
+[32mINFO[0m:     127.0.0.1:53786 - "[1mGET / HTTP/1.1[0m" [32m200 OK[0m
+[33mWARNING[0m:  Unsupported upgrade request.
+[33mWARNING[0m:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+[32mINFO[0m:     127.0.0.1:53796 - "[1mGET /ws/aliced HTTP/1.1[0m" [31m404 Not Found[0m
+[32mINFO[0m:     127.0.0.1:53786 - "[1mGET /api/users/available HTTP/1.1[0m" [31m401 Unauthorized[0m
+[32mINFO[0m:     127.0.0.1:53786 - "[1mGET /sw.js HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53786 - "[1mGET /api/session/status HTTP/1.1[0m" [31m401 Unauthorized[0m
+[32mINFO[0m:     127.0.0.1:53798 - "[1mGET /index.html HTTP/1.1[0m" [31m404 Not Found[0m
+[32mINFO[0m:     127.0.0.1:53786 - "[1mGET /api/connection/pending HTTP/1.1[0m" [31m401 Unauthorized[0m
+[33mWARNING[0m:  Unsupported upgrade request.
+[33mWARNING[0m:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+[32mINFO[0m:     127.0.0.1:53800 - "[1mGET /ws/aliced HTTP/1.1[0m" [31m404 Not Found[0m
+[32mINFO[0m:     127.0.0.1:53786 - "[1mGET / HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53786 - "[1mGET /api/users/available HTTP/1.1[0m" [31m401 Unauthorized[0m
+[32mINFO[0m:     127.0.0.1:53786 - "[1mGET /sw.js HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53804 - "[1mGET /index.html HTTP/1.1[0m" [31m404 Not Found[0m
+[32mINFO[0m:     127.0.0.1:53786 - "[1mGET /api/session/status HTTP/1.1[0m" [31m401 Unauthorized[0m
+[33mWARNING[0m:  Unsupported upgrade request.
+[33mWARNING[0m:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+[32mINFO[0m:     127.0.0.1:53806 - "[1mGET /ws/aliced HTTP/1.1[0m" [31m404 Not Found[0m
+[32mINFO[0m:     127.0.0.1:53786 - "[1mGET /api/connection/pending HTTP/1.1[0m" [31m401 Unauthorized[0m
+[33mWARNING[0m:  Unsupported upgrade request.
+[33mWARNING[0m:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+[32mINFO[0m:     127.0.0.1:53810 - "[1mGET /ws/aliced HTTP/1.1[0m" [31m404 Not Found[0m
+[33mWARNING[0m:  Unsupported upgrade request.
+[33mWARNING[0m:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+[32mINFO[0m:     127.0.0.1:53812 - "[1mGET /ws/aliced HTTP/1.1[0m" [31m404 Not Found[0m
+[32mINFO[0m:     127.0.0.1:53786 - "[1mGET /api/connection/pending HTTP/1.1[0m" [31m401 Unauthorized[0m
+[32mINFO[0m:     127.0.0.1:53786 - "[1mPOST /api/logout HTTP/1.1[0m" [31m401 Unauthorized[0m
+[32mINFO[0m:     127.0.0.1:53786 - "[1mGET / HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53786 - "[1mGET /sw.js HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53786 - "[1mGET /index.html HTTP/1.1[0m" [31m404 Not Found[0m
+2025-11-24 02:16:12,413 - __main__ - INFO - User logged in: aliced
+[32mINFO[0m:     127.0.0.1:53786 - "[1mPOST /api/login HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53786 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53786 - "[1mGET /api/session/status HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53786 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[33mWARNING[0m:  Unsupported upgrade request.
+[33mWARNING[0m:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+[32mINFO[0m:     127.0.0.1:53821 - "[1mGET /ws/aliced HTTP/1.1[0m" [31m404 Not Found[0m
+[33mWARNING[0m:  Unsupported upgrade request.
+[33mWARNING[0m:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+[32mINFO[0m:     127.0.0.1:53823 - "[1mGET /ws/aliced HTTP/1.1[0m" [31m404 Not Found[0m
+[33mWARNING[0m:  Unsupported upgrade request.
+[33mWARNING[0m:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+[32mINFO[0m:     127.0.0.1:53825 - "[1mGET /ws/aliced HTTP/1.1[0m" [31m404 Not Found[0m
+[32mINFO[0m:     127.0.0.1:53786 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[33mWARNING[0m:  Unsupported upgrade request.
+[33mWARNING[0m:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+[32mINFO[0m:     127.0.0.1:53827 - "[1mGET /ws/aliced HTTP/1.1[0m" [31m404 Not Found[0m
+[32mINFO[0m:     127.0.0.1:53786 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53786 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53786 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[33mWARNING[0m:  Unsupported upgrade request.
+[33mWARNING[0m:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+[32mINFO[0m:     127.0.0.1:53830 - "[1mGET /ws/aliced HTTP/1.1[0m" [31m404 Not Found[0m
+[32mINFO[0m:     127.0.0.1:53786 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53838 - "[1mGET /api/session/status HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53838 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53842 - "[1mGET / HTTP/1.1[0m" [32m200 OK[0m
+[33mWARNING[0m:  Unsupported upgrade request.
+[33mWARNING[0m:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+[32mINFO[0m:     127.0.0.1:53848 - "[1mGET /ws/bobd HTTP/1.1[0m" [31m404 Not Found[0m
+[32mINFO[0m:     127.0.0.1:53842 - "[1mGET /api/users/available HTTP/1.1[0m" [31m401 Unauthorized[0m
+[32mINFO[0m:     127.0.0.1:53843 - "[1mGET /sw.js HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53842 - "[1mGET /api/session/status HTTP/1.1[0m" [31m401 Unauthorized[0m
+[32mINFO[0m:     127.0.0.1:53850 - "[1mGET /favicon.ico HTTP/1.1[0m" [31m404 Not Found[0m
+[32mINFO[0m:     127.0.0.1:53842 - "[1mGET /api/connection/pending HTTP/1.1[0m" [31m401 Unauthorized[0m
+[32mINFO[0m:     127.0.0.1:53850 - "[1mGET /index.html HTTP/1.1[0m" [31m404 Not Found[0m
+[33mWARNING[0m:  Unsupported upgrade request.
+[33mWARNING[0m:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+[32mINFO[0m:     127.0.0.1:53852 - "[1mGET /ws/bobd HTTP/1.1[0m" [31m404 Not Found[0m
+[32mINFO[0m:     127.0.0.1:53850 - "[1mPOST /api/logout HTTP/1.1[0m" [31m401 Unauthorized[0m
+[32mINFO[0m:     127.0.0.1:53850 - "[1mGET / HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53850 - "[1mGET /sw.js HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53850 - "[1mGET /index.html HTTP/1.1[0m" [31m404 Not Found[0m
+[32mINFO[0m:     127.0.0.1:53838 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53786 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+2025-11-24 02:16:29,618 - __main__ - INFO - User logged in: bobd
+[32mINFO[0m:     127.0.0.1:53842 - "[1mPOST /api/login HTTP/1.1[0m" [32m200 OK[0m
+[33mWARNING[0m:  Unsupported upgrade request.
+[33mWARNING[0m:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+[32mINFO[0m:     127.0.0.1:53856 - "[1mGET /ws/bobd HTTP/1.1[0m" [31m404 Not Found[0m
+[32mINFO[0m:     127.0.0.1:53842 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53842 - "[1mGET /api/session/status HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53842 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[33mWARNING[0m:  Unsupported upgrade request.
+[33mWARNING[0m:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+[32mINFO[0m:     127.0.0.1:53859 - "[1mGET /ws/bobd HTTP/1.1[0m" [31m404 Not Found[0m
+[32mINFO[0m:     127.0.0.1:53786 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[33mWARNING[0m:  Unsupported upgrade request.
+[33mWARNING[0m:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+[32mINFO[0m:     127.0.0.1:53861 - "[1mGET /ws/aliced HTTP/1.1[0m" [31m404 Not Found[0m
+[33mWARNING[0m:  Unsupported upgrade request.
+[33mWARNING[0m:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+[32mINFO[0m:     127.0.0.1:53863 - "[1mGET /ws/bobd HTTP/1.1[0m" [31m404 Not Found[0m
+[32mINFO[0m:     127.0.0.1:53786 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53838 - "[1mGET /api/session/status HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53842 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53838 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[33mWARNING[0m:  Unsupported upgrade request.
+[33mWARNING[0m:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+[32mINFO[0m:     127.0.0.1:53869 - "[1mGET /ws/bobd HTTP/1.1[0m" [31m404 Not Found[0m
+[32mINFO[0m:     127.0.0.1:53842 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53842 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53838 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53838 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[33mWARNING[0m:  Unsupported upgrade request.
+[33mWARNING[0m:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+[32mINFO[0m:     127.0.0.1:53871 - "[1mGET /ws/bobd HTTP/1.1[0m" [31m404 Not Found[0m
+[32mINFO[0m:     127.0.0.1:53842 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53838 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53842 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53873 - "[1mGET /api/session/status HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53873 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53838 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53877 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53876 - "[1mGET /api/session/status HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53842 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53873 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53876 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[33mWARNING[0m:  Unsupported upgrade request.
+[33mWARNING[0m:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+[32mINFO[0m:     127.0.0.1:53880 - "[1mGET /ws/bobd HTTP/1.1[0m" [31m404 Not Found[0m
+[32mINFO[0m:     127.0.0.1:53876 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53873 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53876 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[33mWARNING[0m:  Unsupported upgrade request.
+[33mWARNING[0m:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+[32mINFO[0m:     127.0.0.1:53886 - "[1mGET /ws/aliced HTTP/1.1[0m" [31m404 Not Found[0m
+[32mINFO[0m:     127.0.0.1:53873 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53842 - "[1mGET /api/session/status HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53842 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53876 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53876 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53888 - "[1mGET /api/session/status HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53842 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53888 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53842 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53842 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53876 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53888 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53842 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53892 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53891 - "[1mGET /api/session/status HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53888 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53891 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53888 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53876 - "[1mGET /api/session/status HTTP/1.1[0m" [32m200 OK[0m
+[33mWARNING[0m:  Unsupported upgrade request.
+[33mWARNING[0m:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+[32mINFO[0m:     127.0.0.1:53894 - "[1mGET /ws/bobd HTTP/1.1[0m" [31m404 Not Found[0m
+[32mINFO[0m:     127.0.0.1:53876 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53891 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53891 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53876 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53876 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53891 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53876 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53891 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53897 - "[1mGET /api/session/status HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53897 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53876 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53899 - "[1mGET /api/session/status HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53901 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53903 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53897 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53901 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53897 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53901 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53901 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53903 - "[1mGET /api/session/status HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53897 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53897 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53901 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53901 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53905 - "[1mGET /api/session/status HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53897 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[33mWARNING[0m:  Unsupported upgrade request.
+[33mWARNING[0m:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+[32mINFO[0m:     127.0.0.1:53908 - "[1mGET /ws/aliced HTTP/1.1[0m" [31m404 Not Found[0m
+[32mINFO[0m:     127.0.0.1:53897 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53905 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53897 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53905 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53901 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53897 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53915 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53914 - "[1mGET /api/session/status HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53901 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53901 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53905 - "[1mGET /api/session/status HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53914 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53905 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[33mWARNING[0m:  Unsupported upgrade request.
+[33mWARNING[0m:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+[32mINFO[0m:     127.0.0.1:53917 - "[1mGET /ws/bobd HTTP/1.1[0m" [31m404 Not Found[0m
+[32mINFO[0m:     127.0.0.1:53914 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53914 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53905 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53905 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53914 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53905 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53914 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53919 - "[1mGET /api/session/status HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53919 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53905 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53926 - "[1mGET /api/session/status HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53927 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53929 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53919 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53927 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53927 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53919 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53927 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53929 - "[1mGET /api/session/status HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53919 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53919 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53927 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53932 - "[1mGET /api/session/status HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53927 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53919 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53927 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53919 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[33mWARNING[0m:  Unsupported upgrade request.
+[33mWARNING[0m:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+[32mINFO[0m:     127.0.0.1:53934 - "[1mGET /ws/aliced HTTP/1.1[0m" [31m404 Not Found[0m
+[32mINFO[0m:     127.0.0.1:53919 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53932 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53927 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53919 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53938 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53937 - "[1mGET /api/session/status HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53937 - "[1mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" [31m404 Not Found[0m
+[32mINFO[0m:     127.0.0.1:53927 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53932 - "[1mGET /api/session/status HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53927 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53937 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53927 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[33mWARNING[0m:  Unsupported upgrade request.
+[33mWARNING[0m:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+[32mINFO[0m:     127.0.0.1:53957 - "[1mGET /ws/bobd HTTP/1.1[0m" [31m404 Not Found[0m
+[32mINFO[0m:     127.0.0.1:53937 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53937 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53927 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53927 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53937 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53927 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53984 - "[1mGET /api/session/status HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53937 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53937 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:54000 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53999 - "[1mGET /api/session/status HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53927 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53984 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53937 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53927 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53927 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53937 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53927 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53984 - "[1mGET /api/session/status HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53937 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53937 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53927 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:54042 - "[1mGET /api/session/status HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53927 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53937 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53927 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53937 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[33mWARNING[0m:  Unsupported upgrade request.
+[33mWARNING[0m:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+[32mINFO[0m:     127.0.0.1:54056 - "[1mGET /ws/aliced HTTP/1.1[0m" [31m404 Not Found[0m
+[32mINFO[0m:     127.0.0.1:53937 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:54066 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53927 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:54079 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:54078 - "[1mGET /api/session/status HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53937 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53927 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53927 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53937 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:54066 - "[1mGET /api/session/status HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:54066 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[33mWARNING[0m:  Unsupported upgrade request.
+[33mWARNING[0m:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+[32mINFO[0m:     127.0.0.1:54101 - "[1mGET /ws/bobd HTTP/1.1[0m" [31m404 Not Found[0m
+[32mINFO[0m:     127.0.0.1:53937 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53937 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:54066 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:54066 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53937 - "[1mGET / HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53937 - "[1mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" [31m404 Not Found[0m
+[33mWARNING[0m:  Unsupported upgrade request.
+[33mWARNING[0m:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+[32mINFO[0m:     127.0.0.1:54123 - "[1mGET /ws/bobd HTTP/1.1[0m" [31m404 Not Found[0m
+[32mINFO[0m:     127.0.0.1:53937 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:54120 - "[1mGET /sw.js HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53937 - "[1mGET /api/session/status HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:54120 - "[1mGET /index.html HTTP/1.1[0m" [31m404 Not Found[0m
+[32mINFO[0m:     127.0.0.1:53937 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[33mWARNING[0m:  Unsupported upgrade request.
+[33mWARNING[0m:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+[32mINFO[0m:     127.0.0.1:54130 - "[1mGET /ws/bobd HTTP/1.1[0m" [31m404 Not Found[0m
+[32mINFO[0m:     127.0.0.1:53937 - "[1mGET / HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53937 - "[1mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" [31m404 Not Found[0m
+[32mINFO[0m:     127.0.0.1:54066 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[33mWARNING[0m:  Unsupported upgrade request.
+[33mWARNING[0m:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+[32mINFO[0m:     127.0.0.1:54136 - "[1mGET /ws/bobd HTTP/1.1[0m" [31m404 Not Found[0m
+[32mINFO[0m:     127.0.0.1:54132 - "[1mGET /sw.js HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53937 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:53937 - "[1mGET /index.html HTTP/1.1[0m" [31m404 Not Found[0m
+[32mINFO[0m:     127.0.0.1:54132 - "[1mGET /api/session/status HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:54132 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[33mWARNING[0m:  Unsupported upgrade request.
+[33mWARNING[0m:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+[32mINFO[0m:     127.0.0.1:54138 - "[1mGET /ws/bobd HTTP/1.1[0m" [31m404 Not Found[0m
+[33mWARNING[0m:  Unsupported upgrade request.
+[33mWARNING[0m:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+[32mINFO[0m:     127.0.0.1:54148 - "[1mGET /ws/bobd HTTP/1.1[0m" [31m404 Not Found[0m
+2025-11-24 02:18:42,063 - __main__ - INFO - User logged out: bobd
+[32mINFO[0m:     127.0.0.1:54132 - "[1mPOST /api/logout HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:54132 - "[1mGET / HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:54132 - "[1mGET /.well-known/appspecific/com.chrome.devtools.json HTTP/1.1[0m" [31m404 Not Found[0m
+[32mINFO[0m:     127.0.0.1:54132 - "[1mGET /sw.js HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:54132 - "[1mGET /index.html HTTP/1.1[0m" [31m404 Not Found[0m
+[32mINFO[0m:     127.0.0.1:54160 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:54066 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:54159 - "[1mGET /api/session/status HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:54159 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:54159 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:54159 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:54159 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:54205 - "[1mGET /api/session/status HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:54159 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:54159 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[33mWARNING[0m:  Unsupported upgrade request.
+[33mWARNING[0m:  No supported WebSocket library detected. Please use "pip install 'uvicorn[standard]'", or install 'websockets' or 'wsproto' manually.
+[32mINFO[0m:     127.0.0.1:54234 - "[1mGET /ws/aliced HTTP/1.1[0m" [31m404 Not Found[0m
+[32mINFO[0m:     127.0.0.1:54159 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:54205 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:54205 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:54159 - "[1mGET /api/session/status HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:54205 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:54205 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:54205 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:54205 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:54205 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:54205 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:54356 - "[1mGET /api/session/status HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:54357 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:54357 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:54357 - "[1mGET /api/users/available HTTP/1.1[0m" [32m200 OK[0m
+[32mINFO[0m:     127.0.0.1:54357 - "[1mGET /api/connection/pending HTTP/1.1[0m" [32m200 OK[0m
